@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pembagian Beban Kerja Guru SMA Negeri 1 Kota Bangun Semester Ganjil Tahun Pelajaran 2026/2027">
+    <title>Beban Kerja Guru - SMA Negeri 1 Kota Bangun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="logo.png" alt="Logo SMAN 1 Kota Bangun" style="width: 36px; height: 36px; object-fit: contain;">
+                </div>
+                <span>SMAN 1 Kota Bangun</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Beranda</a>
+                <a href="#staff" class="nav-link">Daftar Guru</a>
+                <a href="#stats" class="nav-link">Statistik</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Semester Ganjil 2026/2027
+            </div>
+            <h1 class="hero-title">
+                Pembagian<br>
+                <span class="gradient-text">Beban Kerja Guru</span>
+            </h1>
+            <p class="hero-subtitle">
+                SMA Negeri 1 Kota Bangun<br>
+                <span class="hero-address">Jl. Sri Bangun RT. 19, Kota Bangun Ulu, Kec. Kota Bangun 75561</span>
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" id="totalGuru">38</span>
+                    <span class="hero-stat-label">Tenaga Pendidik</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">22</span>
+                    <span class="hero-stat-label">Rombongan Belajar</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">2026</span>
+                    <span class="hero-stat-label">Tahun Pelajaran</span>
+                </div>
+            </div>
+            <a href="#staff" class="hero-cta">
+                <span>Lihat Daftar Guru</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 3L10 17M10 17L16 11M10 17L4 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Overview</span>
+                <h2 class="section-title">Statistik Beban Kerja</h2>
+                <p class="section-desc">Ringkasan data pembagian beban kerja guru semester ganjil</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #3b82f6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="38">0</span>
+                        <span class="stat-label">Total Guru</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #8b5cf6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="34">0</span>
+                        <span class="stat-label">Rata-rata Jam/Minggu</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #06b6d4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="22">0</span>
+                        <span class="stat-label">Mata Pelajaran</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="--accent: #10b981">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="5">0</span>
+                        <span class="stat-label">Hari Mengajar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Grid Section -->
+    <section class="staff-section" id="staff">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tenaga Pendidik</span>
+                <h2 class="section-title">Daftar Guru & Beban Kerja</h2>
+                <p class="section-desc">Klik pada foto guru untuk melihat detail beban kerja dan tugas tambahan</p>
+            </div>
+
+            <!-- Search and filter -->
+            <div class="filter-bar">
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Cari nama guru..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="staff-grid" id="staffGrid">
+                <!-- Cards will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <button class="modal-nav prev" id="modalPrev" aria-label="Sebelumnya">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="modal-nav next" id="modalNext" aria-label="Selanjutnya">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose" aria-label="Tutup">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <div class="modal-photo-wrapper">
+                    <img id="modalPhoto" src="" alt="" class="modal-photo">
+                </div>
+                <div class="modal-identity">
+                    <span class="modal-number" id="modalNumber"></span>
+                    <h2 class="modal-name" id="modalName"></h2>
+                    <p class="modal-nip" id="modalNip"></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-summary">
+                    <div class="summary-item">
+                        <div class="summary-icon blue">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="summary-value" id="modalJam">-</span>
+                            <span class="summary-label">Jam / Minggu</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-icon purple">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="summary-value" id="modalBeban">-</span>
+                            <span class="summary-label">Beban Kerja</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-icon cyan">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="summary-value" id="modalTugas">-</span>
+                            <span class="summary-label">Jumlah Tugas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-tasks">
+                    <h3 class="tasks-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"/>
+                            <line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                        </svg>
+                        Rincian Tugas & Beban Kerja
+                    </h3>
+                    <div class="tasks-list" id="modalTasksList">
+                        <!-- Tasks injected by JS -->
+                    </div>
+                </div>
+                <div class="modal-keterangan" id="modalKeterangan" style="display:none">
+                    <span class="keterangan-badge" id="modalKeteranganText"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>SMA Negeri 1 Kota Bangun</h3>
+                    <p>Jl. Sri Bangun RT. 19, Kota Bangun Ulu<br>Kecamatan Kota Bangun 75561</p>
+                    <p>Telepon: 0811 5814 321</p>
+                    <p>Email: info@smansa.koba@gmail.com</p>
+                    <p>Website: <a href="http://smansakoba.sch.id" target="_blank">smansakoba.sch.id</a></p>
+                </div>
+                <div class="footer-doc">
+                    <h4>Dokumen</h4>
+                    <p>Keputusan Kepala SMA Negeri 1 Kota Bangun</p>
+                    <p>Nomor: 400.3.8.1/070/SMAN.1.KB./II/2026</p>
+                    <p>Tanggal: 11 Februari 2026</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SMA Negeri 1 Kota Bangun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
