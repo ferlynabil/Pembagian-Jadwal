@@ -10,6 +10,48 @@
     }
 })();
 
+// ===== FULLSCREEN TOGGLE =====
+(function initFullscreen() {
+    const btn = document.getElementById('fullscreenBtn');
+    const iconExpand = document.getElementById('fsIconExpand');
+    const iconCompress = document.getElementById('fsIconCompress');
+    if (!btn) return;
+
+    function isFullscreen() {
+        return !!(document.fullscreenElement || document.webkitFullscreenElement ||
+                  document.mozFullScreenElement || document.msFullscreenElement);
+    }
+
+    function updateIcon() {
+        const active = isFullscreen();
+        iconExpand.style.display = active ? 'none' : 'block';
+        iconCompress.style.display = active ? 'block' : 'none';
+        btn.title = active ? 'Keluar Layar Penuh' : 'Mode Layar Penuh';
+        btn.setAttribute('aria-label', btn.title);
+    }
+
+    function enterFullscreen() {
+        const el = document.documentElement;
+        const req = el.requestFullscreen || el.webkitRequestFullscreen ||
+                    el.mozRequestFullScreen || el.msRequestFullscreen;
+        if (req) req.call(el);
+    }
+
+    function exitFullscreen() {
+        const exit = document.exitFullscreen || document.webkitExitFullscreen ||
+                     document.mozCancelFullScreen || document.msExitFullscreen;
+        if (exit) exit.call(document);
+    }
+
+    btn.addEventListener('click', () => {
+        if (isFullscreen()) exitFullscreen();
+        else enterFullscreen();
+    });
+
+    ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange']
+        .forEach(evt => document.addEventListener(evt, updateIcon));
+})();
+
 // ===== NAVBAR SCROLL =====
 window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
